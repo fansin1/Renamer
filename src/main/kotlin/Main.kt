@@ -8,10 +8,21 @@ object Main {
             println("No arguments")
             return
         }
-        File(args[0]).walk().forEach {
-            if (it.name.endsWith(".java") || it.name.endsWith(".kt")) {
 
+        val directory = File(args[0])
+
+        if (!directory.exists()) {
+            println("That directory isn't exists")
+        }
+
+        if (!directory.isDirectory) {
+            println("This isn't directory")
+        }
+
+        directory.walk().forEach {
+            if (it.name.endsWith(".java") || it.name.endsWith(".kt")) {
                 val newFile = File(it.path + ".2019")
+
                 if (newFile.exists()) {
                     println("File " + it.path + " already exists")
                 } else if (!it.renameTo(newFile)) {
