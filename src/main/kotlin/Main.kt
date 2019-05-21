@@ -1,3 +1,5 @@
+package org.fansin.renamer
+
 import java.io.File
 
 object Main {
