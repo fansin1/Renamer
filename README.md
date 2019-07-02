@@ -1,4 +1,4 @@
-# Renamer
+# Renamer (jetbrains internship task)
 
 Utility, that rename all .java and .kt files to .java.2019 and .kt.2019 in directory and subdirectory
 
